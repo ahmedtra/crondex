@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
     "@rainbow-me/rainbowkit": "^1.0.0",
+    "encoding": "^0.1.13",
+    "ethers": "^6.8.0",
+    "lokijs": "^1.5.12",
     "next": "^13.4.0",
+    "pino-pretty": "^10.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "viem": "~0.3.36",
