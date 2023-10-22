@@ -4,7 +4,6 @@ out = "out"
 libs = ["lib","node_modules"]
 
 [rpc_endpoints]
-
 goerli = "${GOERLI_RPC_URL}"
 op-goerli = "${OP_GOERLI_RPC_URL}"
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
