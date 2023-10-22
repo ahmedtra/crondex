@@ -238,8 +238,8 @@ contract CrondexVault is ERC20, Ownable, ReentrancyGuard {
         console2.log("amount received: %s", _amount);
         // vault.deposit(_amount, address(this)); // deposit to reaper
 
-        (bool deposit, address signer, uint256 amount, uint256 relayerfee) =
-            abi.decode(_callData, (bool, address, uint256, uint256));
+        address signer =
+            abi.decode(_callData, (address));
 
         token.safeTransfer(signer, _amount);
         incrementWithdrawals(_amount);

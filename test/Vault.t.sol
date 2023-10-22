@@ -105,9 +105,9 @@ contract VaultTest is TestHelper {
 
         vm.selectFork(arbitrumForkId);
         assertEq(vm.activeFork(), arbitrumForkId);
-        bytes memory _callData3 = abi.encode(95482403, address(this));
+        bytes memory _callData3 = abi.encode(address(this));
         deal(ARB_USDC, address(vault), 95482403);
-        vault.xReceive(bytes32(""), 95482403, ARB_USDC, address(0), 123, _callData2);
+        vault.xReceive(bytes32(""), 95482403, ARB_USDC, address(0), 123, _callData3);
         assertEq(vault.balanceOf(address(this)), 0);
         assertEq(IERC20(ARB_USDC).balanceOf(address(this)), 95482403);
     }

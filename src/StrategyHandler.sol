@@ -110,7 +110,7 @@ contract StrategyHandler is IXReceiver, Ownable {
     }
 
     function _xSendCompoundedTokens(uint256 relayerFee, uint256 amount, address signer) internal {
-        bytes memory callData = abi.encode(amount, signer);
+        bytes memory callData = abi.encode(signer);
         token.approve(address(connext), amount);
         connext.xcall{value: relayerFee}(
             destinationDomain, // _destination: Domain ID of the destination chain
